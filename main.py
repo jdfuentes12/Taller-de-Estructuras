@@ -1,37 +1,33 @@
-from ListaDoble import ListaDoble
 from ListaSimple import ListaEnlazada
-from Listalista import Listalistas
+from ListaDoble import ListaDoble
+from ListaListas import Listalista
 from ListaCircular import ListaCircular
 
-lista_doble = ListaDoble()
-lista_simple = ListaEnlazada()
-lista_lista = Listalistas()
-lista_circular = ListaCircular()
+#lista simple enlazada
+lista = ListaEnlazada()
+lista.agregar("Juan","Perez")
+lista.agregar("Marcela","Diaz")
+lista.imprimir()
 
-#lista simple
-lista_simple.agregar(10)
-lista_simple.agregar(11)
-lista_simple.agregar(15)
-lista_simple.imprimir()
 
-#lista doble
-lista_doble.insetar(15)
-lista_doble.insetar(16)
-lista_doble.insetar(17)
-lista_doble.imprimir()
+#lista doble enlazada
+listadoble = ListaDoble()
+listadoble.agregar("Juan","Perez")
+listadoble.agregar("Marcela","Diaz")
+listadoble.agregar("Javier","Monjes")
+listadoble.imprimir()
 
-#lista de listas
-lista_lista.agregar(2)
-lista_lista.agregar(3)
-lista_lista.agregar(4)
-lista_lista.agregar(5)
-numero = lista_lista.primero
-numero.lista.agregar(1)
-numero.lista.agregar(20)
-numero.lista.agregar(50)
+listaLista = Listalista()
+listaLista.agregar("Juan","Perez")
+numero = listaLista.primero
+numero.lista.agregar("Carlos","Rodas")
+numero.lista.agregar("Ana","Lopez")
+listaLista.agregar("Diana","Calderon")
 
-#lista circular
-lista_circular.agregar(41)
-lista_circular.agregar(42)
-lista_circular.agregar(43)
-lista_circular.imprimir()
+
+listaCircular = ListaCircular()
+listaCircular.agregar(1)
+listaCircular.agregar(2)
+listaCircular.agregar(3)
+listaCircular.agregar(4)
+listaCircular.imprimir()

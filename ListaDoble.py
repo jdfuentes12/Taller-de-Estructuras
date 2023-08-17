@@ -1,27 +1,28 @@
-class Node:
-    def __init__(self, data):
-        self.data = data
+class Nodo:
+    def __init__(self,nombre,apellido):
+        self.nombre = nombre
+        self.apellido = apellido
+        self.siguiente = None
         self.anterior = None
-        self.despues = None
-
-class ListaDoble:
+    
+class ListaDoble():
     def __init__(self):
         self.primero = None
         self.ultimo = None
 
-    def insetar(self, data):
-        new_node = Node(data)
+    def agregar(self,nombre,apellido):
+        nuevo_Nodo = Nodo(nombre,apellido)
         if not self.primero:
-            self.primero = new_node
-            self.ultimo = new_node
+            self.primero = nuevo_Nodo
+            self.ultimo = nuevo_Nodo
         else:
-            new_node.anterior = self.ultimo
-            self.ultimo.despues = new_node
-            self.ultimo = new_node
-
+            nuevo_Nodo.anterior = self.ultimo
+            self.ultimo.siguiente = nuevo_Nodo
+            self.ultimo = nuevo_Nodo
+        
     def imprimir(self):
-        current = self.primero
-        while current:
-            print(current.data)
-            current = current.despues
+        temp = self.primero
+        while temp:
+            print("El nombre es: ",temp.nombre," ",temp.apellido)
+            temp = temp.siguiente
         print("None")
